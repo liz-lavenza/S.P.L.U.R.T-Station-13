@@ -40,7 +40,7 @@
 		return TRUE
 	if(check_head && head && (head.flags_cover & HEADCOVERSEYES))
 		return TRUE
-	if(check_mask && wear_mask && (wear_mask.flags_cover & MASKCOVERSMOUTH))
+	if(check_mask && wear_mask && (wear_mask.flags_cover & MASKCOVERSEYES))
 		return TRUE
 
 /mob/living/carbon/check_projectile_dismemberment(obj/item/projectile/P, def_zone)
