@@ -123,14 +123,14 @@
 
 	return 1
 
-/obj/structure/flora/botany/proc/regrow(proc = TRUE)
+/obj/structure/flora/botany/proc/regrow(trigger_genes = TRUE)
 	icon_state = base_icon
 	name = initial(name)
 	desc = initial(desc)
 	harvested = FALSE
 
 	handle_biolumi()
-	if(proc)
+	if(trigger_genes)
 		for(var/datum/plant_gene/trait/T in myseed.genes)
 			T.on_flora_grow(src)
 
