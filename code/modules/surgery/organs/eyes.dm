@@ -90,7 +90,6 @@
 	if(!.)
 		return
 	var/old_damaged = eye_damaged
-	switch(damage)
 	if(damage > maxHealth)
 		eye_damaged = BLIND_VISION_THREE
 	else if(damage > high_threshold)
