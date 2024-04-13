@@ -112,7 +112,9 @@ GLOBAL_LIST_EMPTY(living_heart_cache)	//A list of all living hearts in existance
 //Blob
 #define BLOB_REROLL_TIME 2400 // blob gets a free reroll every X time
 #define BLOB_SPREAD_COST 4
+#define BLOB_SPREAD_COST_LABEL "4"
 #define BLOB_ATTACK_REFUND 2 //blob refunds this much if it attacks and doesn't spread
+#define BLOB_ATTACK_REFUND_LABEL "2"
 #define BLOB_REFLECTOR_COST 15
 
 /// How many telecrystals a normal traitor starts with
