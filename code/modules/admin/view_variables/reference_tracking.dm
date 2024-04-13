@@ -47,6 +47,12 @@
 		DoSearchVar(thing, "Datums -> [thing.type]", search_time = starting_time)
 	log_reftracker("Finished searching datums")
 
+#ifdef REFERENCE_ALL_LISTS
+	for(var/list/list_to_check) // lists
+		DoSearchVar(list_to_check, "Lists -> [json_encode(list_to_check)], search_time = starting_time")
+	log_reftracker("Finished searching lists")
+#endif
+
 	//Warning, attempting to search clients like this will cause crashes if done on live. Watch yourself
 #ifndef REFERENCE_DOING_IT_LIVE
 	for(var/client/thing) //clients
