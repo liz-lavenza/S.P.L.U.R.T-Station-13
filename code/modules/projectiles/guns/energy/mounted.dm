@@ -13,7 +13,7 @@
 	name = "mounted laser"
 	desc = "An arm mounted cannon that fires lethal lasers."
 	icon = 'icons/obj/items_cyborg.dmi'
-	icon_state = "laser"
+	icon_state = "laser_charge4"
 	item_state = "armcannonlase"
 	force = 5
 	selfcharge = EGUN_SELFCHARGE
