@@ -2580,11 +2580,11 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	glass_name = "glass of [name]"
 	glass_desc = description
 	for(var/taste in tastes)
-		switch(tastes[taste])
-			if(minimum_percent*2 to INFINITY)
-				primary_tastes += taste
-			if(minimum_percent to minimum_percent*2)
+		switch(tastes[taste]/minimum_percent)
+			if(1 to 2)
 				secondary_tastes += taste
+			if(2 to INFINITY)
+				primary_tastes += taste
 
 	var/minimum_name_percent = 0.35
 	name = ""

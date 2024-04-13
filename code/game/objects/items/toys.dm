@@ -823,15 +823,15 @@
 	update_icon()
 
 /obj/item/toy/cards/deck/update_icon_state()
-	switch(cards.len)
-		if(original_size*0.5 to INFINITY)
-			icon_state = "deck_[deckstyle]_full"
-		if(original_size*0.25 to original_size*0.5)
-			icon_state = "deck_[deckstyle]_half"
-		if(1 to original_size*0.25)
-			icon_state = "deck_[deckstyle]_low"
-		else
+	switch(cards.len / original_size)
+		if(0)
 			icon_state = "deck_[deckstyle]_empty"
+		if(0 to 0.25)
+			icon_state = "deck_[deckstyle]_low"
+		if(0.25 to 0.5)
+			icon_state = "deck_[deckstyle]_half"
+		else
+			icon_state = "deck_[deckstyle]_full"
 
 /obj/item/toy/cards/deck/attack_self(mob/user)
 	if(cooldown < world.time - 50)
